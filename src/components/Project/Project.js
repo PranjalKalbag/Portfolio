@@ -1,6 +1,6 @@
 import React from "react"
 import * as styles from "./Project.module.css"
-import ReactCardFlipper from "react-card-flipper"
+import ReactCardFlip from "react-card-flip"
 export default function Project() {
   return (
     <div className={styles.homediv}>
@@ -30,64 +30,20 @@ export default function Project() {
       </div>
       <div className={styles.cardcontainer}>
         <div className={styles.cardbox}>
-          <ReactCardFlipper
-            className={styles.card}
-            width="150px"
-            height="200px"
-            behavior="click"
-            levitate={true}
+          <ReactCardFlip
+            isFlipped={this.state.isFlipped}
+            flipDirection="vertical"
           >
-            <div className={styles.projtitle}>Project 1</div>
-            <div className={styles.projcontent}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <div className={styles.card}>
+              This is the front of the card.
+              <button onClick={this.handleClick}>Click to flip</button>
             </div>
-          </ReactCardFlipper>
-        </div>
-        <div className={styles.cardbox}>
-          <ReactCardFlipper
-            className={styles.card}
-            width="150px"
-            height="200px"
-            behavior="click"
-            levitate={true}
-          >
-            <div className={styles.projtitle}>Project 2</div>
-            <div className={styles.projcontent}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            <div className={styles.card}>
+              This is the back of the card.
+              <button onClick={this.handleClick}>Click to flip</button>
             </div>
-          </ReactCardFlipper>
-        </div>
-        <div className={styles.cardbox}>
-          <ReactCardFlipper
-            className={styles.card}
-            width="150px"
-            height="200px"
-            behavior="click"
-            levitate={true}
-          >
-            <div className={styles.projtitle}>Project 3</div>
-            <div className={styles.projcontent}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </div>
-          </ReactCardFlipper>
+          </ReactCardFlip>
         </div>
       </div>
     </div>

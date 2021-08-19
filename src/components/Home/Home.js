@@ -13,7 +13,10 @@ const Home = () => {
         <span className={styles.text2}>Data Scientist</span>
       </div>
       <div className={styles.buttonclass}>
-        <button onClick={() => scrollTo("#project")}>
+        <button
+          className={styles.buttonstyle}
+          onClick={() => scrollTo("#project")}
+        >
           <span className={styles.icon}>
             <HiArrowDown size="70px" color="#a3c7cf" />
           </span>

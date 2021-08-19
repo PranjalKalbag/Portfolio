@@ -117,7 +117,7 @@
   position: absolute;
   margin-top: 20%;
   /* background: transparent; */
-  border: 3px solid white;
+
   background-color: black;
 }
 .icon {
@@ -125,4 +125,9 @@
   /* color: #ffffff; */
 
   height: 70px;
+}
+.buttonstyle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }

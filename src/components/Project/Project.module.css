@@ -52,7 +52,9 @@
   /* text-align: start; */
   align-items: flex-start;
   position: relative;
-  border: 1px solid red;
+
+  padding: 30px;
+  margin: -75%;
 }
 .card {
   box-shadow: 0 30px 30px rgba(0, 0, 0, 0.3);
