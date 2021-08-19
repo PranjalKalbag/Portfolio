@@ -1,105 +1,111 @@
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
-.homediv
-{
-    height: 92vh;
-    padding-bottom: 2%;
-    padding-top: 1%;
-    padding-left: 8.5%;
-    padding-right: 5.5%;
-    background-position: center;
-    /* margin: auto; */
-    color:#a3c7cf;
-    display: flex;
-    align-items: center;
-    background: #343F4F;
-    font-family: 'Montserrat', sans-serif;
-    background-image: url("homepage.jpg");
-    background-size: auto;
-    margin: none;
-    
-    
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+.homediv {
+  height: 94.7vh;
+  width: auto;
+  padding-bottom: 2.1%;
+  padding-top: 1%;
+  padding-left: 8.5%;
+  padding-right: 5.5%;
+  background-position: center;
+  /* margin: auto; */
+  color: #a3c7cf;
+  display: flex;
+  align-items: center;
+  background: #343f4f;
+  font-family: "Montserrat", sans-serif;
+  background-image: url("homepage.jpg");
+  background-size: auto;
+  margin: none;
 }
-.statictext{
-    font-size: 60px;
+.statictext {
+  font-size: 60px;
   font-weight: 700;
   margin-bottom: 10%;
 }
-.homediv .dynamictext{
-    margin-left: 15px;
-    height: 90px;
-    line-height: 90px;
-    margin-bottom: 25%;
+.homediv .dynamictext {
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  margin-bottom: 25%;
 
-    /* overflow: hidden; */
+  /* overflow: hidden; */
+}
+.text1 {
+  animation: text1;
+}
+.text1::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+}
+
+.text2 {
+  animation: text2;
+}
+
+.text1,
+.text2 {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  animation-duration: 12s;
+  animation-timing-function: steps(25, end);
+  animation-iteration-count: infinite;
+}
+.dynamictext {
+  font-size: 60px;
+  font-weight: 400;
+}
+.text1::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 0.75s;
+  animation-timing-function: steps(1, end);
+}
+.text2::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 0.75s;
+  animation-timing-function: steps(1, end);
+}
+
+@keyframes text2 {
+  0%,
+  50%,
+  100% {
+    width: 0;
   }
-  .text1 {
-    animation: text1;
+
+  60%,
+  90% {
+    width: 7.25em;
   }
-  .text1::after {
-    content: "|";
-    position: absolute;
-    right: 0;
+}
+
+@keyframes text1 {
+  0%,
+  50%,
+  100% {
+    width: 0;
   }
-  
-  .text2 {
-    animation: text2;
+  10%,
+  40% {
+    width: 9.3em;
   }
-  
-  .text1, .text2 {
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    position: relative;
-    animation-duration: 12s;
-    animation-timing-function: steps(25, end);
-    animation-iteration-count: infinite;
+}
+
+@keyframes caret {
+  0%,
+  100% {
+    opacity: 0;
   }
- .dynamictext{
-    font-size: 60px;
-    font-weight: 400;
- }
-  .text1::after{
-    content: "|";
-    position: absolute;
-    right: 0;
-    animation: caret infinite;
-    animation-duration: 0.75s;
-    animation-timing-function: steps(1, end);
+  50% {
+    opacity: 1;
   }
-  .text2::after{
-    content: "|";
-    position: absolute;
-    right: 0;
-    animation: caret infinite;
-    animation-duration: 0.75s;
-    animation-timing-function: steps(1, end);
-  }
-  
-  @keyframes text2 {
-    0%, 50%, 100% {
-      width: 0;
-    }
-    
-    60%, 90% {
-      width: 7.25em;
-    }
-  }
-  
-  @keyframes text1 {
-    0%, 50%, 100% {
-      width: 0;
-    }
-    10%, 40% {
-      width: 9.3em;
-    }
-  }
-  
-  @keyframes caret {
-    0%, 100% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-  }
+}
