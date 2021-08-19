@@ -1,0 +1,11 @@
+.homediv {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  /* background-image: url("homepage.jpg");
+    background-size: auto; */
+  /* margin: none; */
+  /* margin-top: 50%; */
+  padding-top: 25%;
+  /* height: 94.7vh; */
+}

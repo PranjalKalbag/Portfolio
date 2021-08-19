@@ -57,6 +57,7 @@
 .dynamictext {
   font-size: 60px;
   font-weight: 400;
+  padding-left: 5%;
 }
 .text1::after {
   content: "|";
@@ -108,4 +109,20 @@
   50% {
     opacity: 1;
   }
+}
+
+.buttonclass {
+  /* display: none; */
+  /* border: solid 1px red; */
+  position: absolute;
+  margin-top: 20%;
+  /* background: transparent; */
+  border: 3px solid white;
+  background-color: black;
+}
+.icon {
+  /* transition: all 0.2s; */
+  /* color: #ffffff; */
+
+  height: 70px;
 }
