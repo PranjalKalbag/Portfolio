@@ -1,7 +1,12 @@
-import React from "react"
+import React, {useState} from "react"
 import * as styles from "./Project.module.css"
 import ReactCardFlip from "react-card-flip"
 export default function Project() {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleClick = () => {
+    setIsFlipped(!isFlipped);
+  };
   return (
     <div className={styles.homediv}>
       {/* <div className={styles.heading}><h1>Some of My favourite projects</h1></div>
@@ -29,22 +34,37 @@ export default function Project() {
         <h1>Some of My favourite projects</h1>
       </div>
       <div className={styles.cardcontainer}>
-        <div className={styles.cardbox}>
-          <ReactCardFlip
-            isFlipped={this.state.isFlipped}
-            flipDirection="vertical"
-          >
-            <div className={styles.card}>
-              This is the front of the card.
-              <button onClick={this.handleClick}>Click to flip</button>
-            </div>
+      <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+      <div
+        onClick={handleClick}
+        style={{
+          backgroundColor: "green",
+          height: 100,
+          color: "#fff",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        Project 1
+        {/* <button onClick={handleClick}>Click to flip</button> */}
+      </div>
 
-            <div className={styles.card}>
-              This is the back of the card.
-              <button onClick={this.handleClick}>Click to flip</button>
-            </div>
-          </ReactCardFlip>
-        </div>
+      <div
+      onClick={handleClick}
+        style={{
+          backgroundColor: "red",
+          height: 100,
+          color: "#fff",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        More info about project here
+        {/* <button onClick={handleClick}>Click to flip</button> */}
+      </div>
+    </ReactCardFlip>
       </div>
     </div>
   )
